@@ -2,6 +2,7 @@
 
     <article class="box">
         <h3>Class e Style binding</h3>
+        <hr>
         <div class="form-inline">
             Selecione uma classe:
             <select class="form-control" #classe (change)="0">
@@ -47,6 +48,7 @@
 
     <article class="box">
         <h3>Interpolation/Interpolação</h3>
+        <hr>
         <p>String renderizada com interpolação: {{ url }}</p>
         <p>Resultado de 1 + 1 é {{ 1 + 1 }}</p>
         <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
@@ -55,6 +57,7 @@
 
     <article class="box">
         <h3>Property Binding</h3>
+        <hr>
         <img src="{{ urlImagem }}" style="width: 100%; margin: 20px 0">
         <img [src]="urlImagem" style="width: 100%; margin: 20px 0">
 

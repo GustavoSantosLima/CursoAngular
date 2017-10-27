@@ -1,0 +1,32 @@
+<!-- Componente Output Property -->
+<app-output-property [valor]="valorInicial" (mudouValor)="onMudouValor($event)"></app-output-property>
+
+<section class="container">
+    <article class="box">
+        <h3>Two Way Data Binding</h3>
+        <span class="text-small">Com NgModel</span>
+        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>Nome:</label>
+                <input class="form-control" type="text" [(ngModel)]="pessoa.nome">
+                <br>
+                <label>E-mail:</label>
+                <input class="form-control" type="email" [(ngModel)]="pessoa.email">
+                <br>
+                <label>Idade:</label>
+                <input class="form-control" type="number" [(ngModel)]="pessoa.idade">
+                <br>
+            </div>
+            <div class="col-sm-6">
+                <div class="jumbotron text-center">
+                    <strong>Nome: {{ pessoa.nome }}</strong>
+                    <br>
+                    <strong>Idade: {{ pessoa.email }}</strong>
+                    <br>
+                    <strong>Idade: {{ pessoa.idade }}</strong>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

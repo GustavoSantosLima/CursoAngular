@@ -1,0 +1,21 @@
+
+
+<section class="container">
+    <article class="box">
+        <h3>OutPut Property</h3>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" (click)="decrementa()">-</button>
+                    </span>
+                    <input type="text" class="form-control text-center" [value]="valor" readonly #campoInput>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" (click)="incrementa()">+</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>

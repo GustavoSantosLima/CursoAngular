@@ -1,9 +1,21 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Project Data Binding!
-  </h1>
+    <h1>
+        Module Data Binding!
+    </h1>
 </div>
+
+<!-- Componente Two Way Data Binding -->
+<section class="container">
+    <article class="box">
+        <app-life-cycle [valorInicial]="valor" *ngIf="!deletarClico"></app-life-cycle>
+        <button class="btn btn-primary" (click)="mudarValor()">Mudar Valor</button>
+        <button class="btn btn-primary" (click)="destruirCiclo()">Destruir Component</button>
+    </article>
+</section>
+
+<!-- Componente Two Way Data Binding -->
+<app-two-way-data-binding></app-two-way-data-binding>
 
 <!-- Componente Event Binding -->
 <app-event-binding></app-event-binding>

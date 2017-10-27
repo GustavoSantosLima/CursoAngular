@@ -8,11 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class EventBindingComponent implements OnInit {
 
     valorInput = '';
+    valorSalvo = '';
+    isMouseOver = false;
 
   constructor() { }
 
   botaoClicado() {
       alert('Hello!');
+  }
+
+  onMouseOverOut() {
+      this.isMouseOver = !this.isMouseOver;
+  }
+
+  salvarValor(valor) {
+      this.valorSalvo = valor;
   }
 
   onKeyUp(evento: KeyboardEvent) {
