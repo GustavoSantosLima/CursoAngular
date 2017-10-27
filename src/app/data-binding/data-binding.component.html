@@ -1,0 +1,63 @@
+<section class="container">
+
+    <article class="box">
+        <h3>Class e Style binding</h3>
+        <div class="form-inline">
+            Selecione uma classe:
+            <select class="form-control" #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div class="alert {{ classe.value }}">
+            <strong>Esta com muda conforme o valor do Select!</strong>
+            <span class="text-small">(Property binding com Interpolação)</span>
+        </div>
+
+        <div class="alert alert-danger" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+            <strong>Este elemento só aparece se o select for ERRO</strong>
+            <span class="text-small">(Style binding)</span>
+        </div>
+
+        <br>
+
+        <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+            <strong>Sucesso</strong>
+            <span class="text-small">(Property binding de Class)</span>
+        </div>
+        <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
+            <strong>Info</strong>
+            <span class="text-small">(Property binding de Class)</span>
+        </div>
+        <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+            <strong>Alerta</strong>
+            <span class="text-small">(Property binding de Class)</span>
+        </div>
+        <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+            <strong>Erro</strong>
+            <span class="text-small">(Property binding de Class)</span>
+        </div>
+
+    </article>
+
+    <article class="box">
+        <h3>Interpolation/Interpolação</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Resultado de 1 + 1 é {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
+        <p>Condição de variaveis boolean: {{ cursoAngular && getBoolean() }}</p>
+    </article>
+
+    <article class="box">
+        <h3>Property Binding</h3>
+        <img src="{{ urlImagem }}" style="width: 100%; margin: 20px 0">
+        <img [src]="urlImagem" style="width: 100%; margin: 20px 0">
+
+    </article>
+
+</section>

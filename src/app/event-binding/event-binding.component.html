@@ -1,0 +1,28 @@
+<section class="container">
+
+    <article class="box">
+
+        <h3>Event Binding</h3>
+
+        <div>
+            <button class="btn btn-primary" (click)="botaoClicado()">Me Clique!</button>
+        </div>
+
+        <br><br>
+
+        <div class="row">
+
+            <div class="col-sm-6">
+                <input class="form-control" type="text" (keyup)="onKeyUp($event)" placeholder="Digite alvo...">
+                <br>
+                <div class="jumbotron">
+                    <strong>{{ valorInput }}</strong>
+                </div>
+            </div>
+
+        </div>
+
+
+    </article>
+
+</section>
